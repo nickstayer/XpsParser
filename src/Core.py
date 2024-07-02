@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def main():
-    path_xps = os.path.join(os.getcwd(), "data")
+    path_xps = os.path.join(os.getcwd(), "xps")
     template = os.path.join(os.getcwd(), "template.docx")
     input(f"Поместите xps файлы в папку {path_xps} и нажмите Enter")
     if os.path.exists(path_xps):
