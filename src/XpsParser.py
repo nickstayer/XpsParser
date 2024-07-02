@@ -2,7 +2,6 @@ import os
 import zipfile
 import re
 from Xps import Xps
-from lxml import etree
 
 
 class XpsParser:
