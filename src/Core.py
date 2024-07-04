@@ -19,10 +19,10 @@ def main():
                 xps = parser.parse()
                 if os.path.exists(template):
                     word.open(template)
-                    word.insert_text_after_line("Подразделение:", xps.name)
+                    word.insert_text_after_line("Подразделение:", xps.name.replace("1528 ", ""))
                     word.insert_text_in_table(1, 1, 2, xps.name)
-                    word.insert_text_in_table(1, 2, 2, xps.passw)
-                    word.insert_text_in_table(1, 3, 2, xps.passw_phrase)
+                    word.insert_text_in_table(1, 2, 2, xps.passw_phrase)
+                    word.insert_text_in_table(1, 3, 2, xps.passw)
                     new_file = os.path.join(os.path.dirname(file), xps.name)
                     word.save_as(new_file)
                     word.close()
